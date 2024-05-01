@@ -13,7 +13,6 @@ function adicionar(event, idDisplay, preco){
       displayTela.innerHTML= i;
       h2.innerHTML = "<sup>$</sup>"+10*i+",00";
    }else{
-      displayTela.innerHTML = "ATINGIU O LIMITE"
    }
 }
 
@@ -41,6 +40,7 @@ function abrirMneu(){
 function fecharMenu(){
    if(menu.style.display = "flex"){
       menu.style.display = "none"
+      menu.style.animationName = "fechar";
    }else{
       menu.style.display = "flex"
    }

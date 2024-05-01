@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="script.js" defer></script>
+    <title>Juice app</title>
+</head>
+<body>
+    <div class="telaCardapio">
+        <div class="menuCardapio">
+            <div class="searchBox">
+                <div class="searchContent">
+                    <input type="text" id="" placeholder="Pesquise sua bebida">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </div>
+                <button onclick="abrirMneu()">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
+
+                <div id="menuDrop">
+                    <button onclick="fecharMenu()">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+                    oi
+                </div>
+            </div>
+            <div class="juicesContent">
+                <ul>
+                    <li>
+                        <img src="./img/avocado.png" alt="" class="icons">
+                        <p>Abacate</p>
+                    </li>
+                    <li>
+                        <img src="./img/maca.png" alt="" class="icons">
+                        <p>Maçã</p>
+                    </li>
+                    <li>
+                        <img src="./img/uva.png" alt="" class="icons">
+                        <p>Uva</p>
+                    </li>
+                    <li>
+                        <img src="./img/manga.png" alt="" class="icons">
+                        <p>Manga</p>
+                    </li>
+                    <li>
+                        <img src="./img/bananas.png" alt="" class="icons">
+                        <p>Banana</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cardapioVendas">
+            <div class="produtosDescrisao">
+                <ul>
+                    <li>
+                       <div class="text-description">
+                        <h2>Juice</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem eaque sunt</p>
+                        <div class="contadorContent">
+                            <h2 id="preco1"><sup>$</sup>10,00</h2>
+                            <div class="itemContador">
+                                <button id="btnMais" onclick="adicionar(event,'display1','preco1')">+</button>
+                                <span class="display" id="display1">1</span>
+                                <button id="btnMneos" onclick="subtrair(event,'display1','preco1')">-</button>
+                            </div>
+                        </div>
+                       </div>
+                        <div class="imgContainer firstChild">
+                            <div class="backgroundColor">
+                                <img src="./img/lataDeSuco.png" alt="">
+                            </div>
+                        </div>
+                    </li>    
+                    <li>
+                        <div class="text-description">
+                         <h2>Juice</h2>
+                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem eaque sunt</p>
+                         <div class="contadorContent">
+                             <h2 id="preco2"><sup>$</sup>10,00</h2>
+                             <div class="itemContador">
+                                 <button id="btnMais" onclick="adicionar(event,'display2','preco2')">+</button>
+                                 <span class="display" id="display2">1</span>
+                                 <button id="btnMneos" onclick="subtrair(event,'display2','preco2')">-</button>
+                             </div>
+                         </div>
+                        </div>
+                         <div class="imgContainer">
+                             <div class="backgroundColor">
+                                 <img src="./img/lataDeSuco.png" alt="">
+                             </div>
+                         </div>
+                    </li> 
+                    <li>
+                        <div class="text-description">
+                         <h2>Juice</h2>
+                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem eaque sunt</p>
+                         <div class="contadorContent">
+                             <h2 id="preco3"><sup>$</sup>10,00</h2>
+                             <div class="itemContador">
+                                 <button id="btnMais" onclick="adicionar(event,'display3','preco3')">+</button>
+                                 <span class="display" id="display3">1</span>
+                                 <button id="btnMneos" onclick="subtrair(event,'display3','preco3')">-</button>
+                             </div>
+                         </div>
+                        </div>
+                         <div class="imgContainer">
+                             <div class="backgroundColor">
+                                 <img src="./img/lataDeSuco.png" alt="">
+                             </div>
+                         </div>
+                    </li>  
+                    <li>
+                        <div class="text-description">
+                         <h2>Juice</h2>
+                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem eaque sunt</p>
+                         <div class="contadorContent">
+                             <h2 id="preco4"><sup>$</sup>10,00</h2>
+                             <div class="itemContador">
+                                 <button id="btnMais" onclick="adicionar(event,'display4','preco4')">+</button>
+                                 <span class="display" id="display4">1</span>
+                                 <button id="btnMneos" onclick="subtrair(event,'display4','preco4')">-</button>
+                             </div>
+                         </div>
+                        </div>
+                         <div class="imgContainer">
+                             <div class="backgroundColor">
+                                 <img src="./img/lataDeSuco.png" alt="">
+                             </div>
+                         </div>
+                    </li> 
+                    <li>
+                        <div class="text-description">
+                         <h2>Juice</h2>
+                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem eaque sunt</p>
+                         <div class="contadorContent">
+                             <h2 id="preco5"><sup>$</sup>10,00</h2>
+                             <div class="itemContador">
+                                 <button id="btnMais" onclick="adicionar(event,'display5','preco5')">+</button>
+                                 <span class="display" id="display5">1</span>
+                                 <button id="btnMneos" onclick="subtrair(event,'display5','preco5')">-</button>
+                             </div>
+                         </div>
+                        </div>
+                         <div class="imgContainer lastChild ">
+                             <div class="backgroundColor yellow">
+                                 <img src="./img/lataDeSuco.png" alt="">
+                             </div>
+                         </div>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

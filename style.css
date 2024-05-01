@@ -14,6 +14,12 @@ sup{
     font-size: small;
 }
 
+.telaCardapio{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
 #menuDrop{
     display: none;
     position: absolute;
@@ -30,8 +36,11 @@ sup{
 }
 
 .menuCardapio{
-    background-color: palevioletred;
-    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #ee828b;
+    padding: 40px 30px 30px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
@@ -65,6 +74,20 @@ sup{
     color: pink;
 }
 
+.searchBox > button{
+    border: none;
+    background-color: #fdd4d8;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+}
+
+#icon{
+    color: #fff;
+}
+
 .juicesContent > ul{
     display: flex;
     list-style: none;
@@ -77,6 +100,19 @@ sup{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.juicesContent > ul li img{
+    width: 45px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.juicesContent > ul li p{
+    margin-top: 10px;
+    font-size: small;
+    color: #fff;
 }
 
 .cardapioVendas{
@@ -104,7 +140,7 @@ sup{
 }
 
 .imgContainer{
-    background-color: rosybrown;
+    background-color: #fff0f2;
     padding: 20px;
 }
 
@@ -117,7 +153,7 @@ sup{
 }
 
 .backgroundColor{
-    background-color: royalblue;
+    background-color: #f58e92;
     padding: 10px 35px;
     border-radius: 20px;
     display: flex;
@@ -134,7 +170,7 @@ sup{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 25px;
+    padding: 30px;
     gap: 15px;
 }
 

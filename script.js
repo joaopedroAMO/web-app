@@ -40,7 +40,6 @@ function abrirMneu(){
 function fecharMenu(){
    if(menu.style.display = "flex"){
       menu.style.display = "none"
-      menu.style.animationName = "fechar";
    }else{
       menu.style.display = "flex"
    }

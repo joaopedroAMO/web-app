@@ -29,8 +29,29 @@ sup{
     padding: 37px 10px;
     background-color: #ccc;
     width: 300px;
+    height: 100%;
+    z-index: 1000;
     animation-name: animasao;
     animation-duration: .2s;
+    background-color: pink;
+}
+
+.btnClose{
+    padding: 7px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 5px;
+    left: 220px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconClose{
+    color
 }
 
 @keyframes animasao{

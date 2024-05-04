@@ -92,6 +92,7 @@ sup{
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;
+    gap: 10px;
 }
 
 .searchContent > input{
@@ -247,20 +248,24 @@ sup{
     background-color: rgb(255, 209, 217);
 }
 
+.pink{
+    background-color: pink;
+}
+
 .Dois{
-    background-color: #f9a3a8;
+    background-color: #FF91A4;
 }
 
 .tres{
-    background-color: #f7a1a5;
+    background-color:  #fc7c93;
 }
 
 .quatro{
-    background-color: #df8ef5;
+    background-color:  #fc5f8e ;
 }
 
 .yellow{
-    background-color: #c58ef5;
+    background-color:  #ff4a77;
 }
 
 /* tela de finalização de compra do produto */

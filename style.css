@@ -22,7 +22,7 @@ sup{
 
 #menuDrop{
     display: none;
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     top: 0;
     right: 0;
@@ -48,10 +48,11 @@ sup{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #ee828b;
 }
 
 .iconClose{
-    color
+    color: #fff;
 }
 
 @keyframes animasao{
@@ -262,3 +263,41 @@ sup{
     background-color: #c58ef5;
 }
 
+/* tela de finalização de compra do produto */
+.telaVenda{
+    height: 100vh;
+    max-width: 100vw;
+    background-color: #ccc;
+}
+
+.buyContent{
+    width: 100%;
+    height: 100%;
+}
+
+.top{
+   height: 50%; 
+   border-bottom-left-radius: 35px;
+   border-bottom-right-radius: 35px;
+}
+
+.top > img{
+    height: 90%;
+}
+
+.bottom{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+.buy{
+    border-radius: 50px;
+    border: none;
+    padding: 15px;
+    width: 80%;
+    font-size: larger;
+    font-weight: bold;
+}

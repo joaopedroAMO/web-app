@@ -264,18 +264,13 @@ sup{
 }
 
 /* tela de finalização de compra do produto */
-.telaVenda{
+.buyContent{
     height: 100vh;
     max-width: 100vw;
-    background-color: #ccc;
     display: none;
     position: fixed;
     top: 0;
-}
-
-.buyContent{
-    width: 100%;
-    height: 100%;
+    background-color: #fff;
 }
 
 .top{

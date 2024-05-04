@@ -1,7 +1,6 @@
 const btnMais = document.getElementById("btnMais");
 const btnMenos = document.getElementById("btnMenos");
 const menu = document.getElementById("menuDrop");
-const telaVenda = document.getElementById("telaVenda");
 
 
 function adicionar(event, idDisplay, preco){
@@ -46,7 +45,9 @@ function fecharMenu(){
    }
 }
 
-function abrirProduto(){
+function abrirProduto(event,tela){
+   const telaVenda = document.getElementById(tela);
+
    if(telaVenda.style.display = "none")
    {
       telaVenda.style.display = "block";
@@ -55,7 +56,8 @@ function abrirProduto(){
    }
 }
 
-function fecharProduto(){
+function fecharProduto(event,tela){
+   const telaVenda = document.getElementById(tela);
    if(telaVenda.style.display = "block")
    {
       telaVenda.style.display = "none";

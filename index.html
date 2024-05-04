@@ -74,7 +74,7 @@
                             </div>
                         </div>
                        </div>
-                        <div class="imgContainer firstChild" onclick="abrirProduto()">
+                        <div class="imgContainer firstChild" onclick="abrirProduto(event,'buyContent1')">
                             <div class="backgroundColor">
                                 <img src="./img/lataDeSuco.png" alt="">
                             </div>
@@ -93,7 +93,7 @@
                              </div>
                          </div>
                         </div>
-                         <div class="imgContainer">
+                         <div class="imgContainer" onclick="abrirProduto(event,'buyContent2')">
                              <div class="backgroundColor Dois">
                                  <img src="./img/lataDeSuco.png" alt="">
                              </div>
@@ -112,7 +112,7 @@
                              </div>
                          </div>
                         </div>
-                         <div class="imgContainer">
+                         <div class="imgContainer" onclick="abrirProduto(event,'buyContent3')">
                              <div class="backgroundColor tres">
                                  <img src="./img/lataDeSuco.png" alt="">
                              </div>
@@ -131,7 +131,7 @@
                              </div>
                          </div>
                         </div>
-                         <div class="imgContainer">
+                         <div class="imgContainer" onclick="abrirProduto(event,'buyContent4')">
                              <div class="backgroundColor quatro">
                                  <img src="./img/lataDeSuco.png" alt="">
                              </div>
@@ -150,7 +150,7 @@
                              </div>
                          </div>
                         </div>
-                         <div class="imgContainer lastChild ">
+                         <div class="imgContainer lastChild " onclick="abrirProduto(event,'buyContent5')">
                              <div class="backgroundColor yellow">
                                  <img src="./img/lataDeSuco.png" alt="">
                              </div>
@@ -161,10 +161,138 @@
         </div>
     </div>
 
-    <div class="telaVenda" id="telaVenda">
-        <div class="buyContent">
+    <div class="telaVenda">
+        <div class="buyContent" id="buyContent1">
             <div class="top Dois">
-                <button class="voltar" onclick="fecharProduto()">
+                <button class="voltar" onclick="fecharProduto(event,'buyContent1')">
+                    <span class="material-symbols-outlined iconVoltar">
+                        chevron_left
+                    </span>
+                </button>
+
+                <button class="like">
+                    <span class="material-symbols-outlined">
+                        favorite
+                    </span>
+                </button>
+                <img src="./img/lataDeSuco.png" alt="">
+            </div>
+            <div class="bottom">
+                <h2>Juice</h2>
+                <p>description</p>
+                <div class="contadorContent">
+                    <h3 id="preco3"><sup>$</sup>10,00</h3>
+                    <div class="itemContador tres">
+                        <button id="btnMais" onclick="adicionar(event,'display3','preco3')">+</button>
+                        <span class="display" id="display4">1</span>
+                        <button id="btnMneos" onclick="subtrair(event,'display3','preco3')">-</button>
+                    </div>
+                </div>
+                <h3>Sobre o Produto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem sapiente quo, perferendis, eum quibusdam corporis quod vel voluptas impedit non iste qui aperiam tempora, ex facilis inventore magnam ab quas!</p>
+                <button class="buy">Comprar</button>
+            </div>
+        </div>
+
+        <div class="buyContent" id="buyContent2">
+            <div class="top quatro">
+                <button class="voltar" onclick="fecharProduto(event,'buyContent2')">
+                    <span class="material-symbols-outlined iconVoltar">
+                        chevron_left
+                    </span>
+                </button>
+
+                <button class="like">
+                    <span class="material-symbols-outlined">
+                        favorite
+                    </span>
+                </button>
+                <img src="./img/lataDeSuco.png" alt="">
+            </div>
+            <div class="bottom">
+                <h2>Juice</h2>
+                <p>description</p>
+                <div class="contadorContent">
+                    <h3 id="preco3"><sup>$</sup>10,00</h3>
+                    <div class="itemContador tres">
+                        <button id="btnMais" onclick="adicionar(event,'display3','preco3')">+</button>
+                        <span class="display" id="display4">1</span>
+                        <button id="btnMneos" onclick="subtrair(event,'display3','preco3')">-</button>
+                    </div>
+                </div>
+                <h3>Sobre o Produto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem sapiente quo, perferendis, eum quibusdam corporis quod vel voluptas impedit non iste qui aperiam tempora, ex facilis inventore magnam ab quas!</p>
+                <button class="buy">Comprar</button>
+            </div>
+        </div>
+
+        <div class="buyContent" id="buyContent3">
+            <div class="top quatro">
+                <button class="voltar" onclick="fecharProduto(event,'buyContent3')">
+                    <span class="material-symbols-outlined iconVoltar">
+                        chevron_left
+                    </span>
+                </button>
+
+                <button class="like">
+                    <span class="material-symbols-outlined">
+                        favorite
+                    </span>
+                </button>
+                <img src="./img/lataDeSuco.png" alt="">
+            </div>
+            <div class="bottom">
+                <h2>Juice</h2>
+                <p>description</p>
+                <div class="contadorContent">
+                    <h3 id="preco3"><sup>$</sup>10,00</h3>
+                    <div class="itemContador tres">
+                        <button id="btnMais" onclick="adicionar(event,'display3','preco3')">+</button>
+                        <span class="display" id="display4">1</span>
+                        <button id="btnMneos" onclick="subtrair(event,'display3','preco3')">-</button>
+                    </div>
+                </div>
+                <h3>Sobre o Produto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem sapiente quo, perferendis, eum quibusdam corporis quod vel voluptas impedit non iste qui aperiam tempora, ex facilis inventore magnam ab quas!</p>
+                <button class="buy">Comprar</button>
+            </div>
+        </div>
+
+        <div class="buyContent" id="buyContent4">
+            <div class="top quatro">
+                <button class="voltar" onclick="fecharProduto(event,'buyContent4')">
+                    <span class="material-symbols-outlined iconVoltar">
+                        chevron_left
+                    </span>
+                </button>
+
+                <button class="like">
+                    <span class="material-symbols-outlined">
+                        favorite
+                    </span>
+                </button>
+                <img src="./img/lataDeSuco.png" alt="">
+            </div>
+            <div class="bottom">
+                <h2>Juice</h2>
+                <p>description</p>
+                <div class="contadorContent">
+                    <h3 id="preco3"><sup>$</sup>10,00</h3>
+                    <div class="itemContador tres">
+                        <button id="btnMais" onclick="adicionar(event,'display3','preco3')">+</button>
+                        <span class="display" id="display4">1</span>
+                        <button id="btnMneos" onclick="subtrair(event,'display3','preco3')">-</button>
+                    </div>
+                </div>
+                <h3>Sobre o Produto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem sapiente quo, perferendis, eum quibusdam corporis quod vel voluptas impedit non iste qui aperiam tempora, ex facilis inventore magnam ab quas!</p>
+                <button class="buy">Comprar</button>
+            </div>
+        </div>
+
+        <div class="buyContent" id="buyContent5">
+            <div class="top quatro">
+                <button class="voltar" onclick="fecharProduto(event,'buyContent5')">
                     <span class="material-symbols-outlined iconVoltar">
                         chevron_left
                     </span>

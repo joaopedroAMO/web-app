@@ -355,7 +355,7 @@ sup{
     height: 50px;
     position: absolute;
     right: 30px;
-    top: 46%;
+    top: 42%;
     color: rgb(204, 204, 204);
     transition: .3s;
     background-color: #fff;
@@ -368,7 +368,13 @@ sup{
     border-radius: 50px;
     border: none;
     padding: 15px;
-    width: 80%;
+    width: 100%;
     font-size: larger;
     font-weight: bold;
+    color: #fff;
+    transition: .2s;
+}
+
+.buy:hover{
+    background-color: #fdd4d8;
 }

@@ -65,6 +65,15 @@ sup{
     
 }
 
+@keyframes animasaoBuyContent{
+    from{
+        max-width: 0vw;
+    }
+    to{
+        max-width: 100vw;
+    }
+}
+
 .icons{
     width: 30px;
 }
@@ -276,6 +285,8 @@ sup{
     position: fixed;
     top: 0;
     background-color: #fff;
+    animation: animasaoBuyContent;
+    animation-duration: .1s;
 }
 
 .top{
@@ -290,6 +301,7 @@ sup{
 .top > img{
     height: 90%;
     object-fit: contain;
+    filter: drop-shadow(-20px 5px 10px rgba(0,0,0,0.4));
 }
 
 .bottom{
@@ -303,6 +315,14 @@ sup{
 .voltar{
     position: relative;
     width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: rgb(254, 204, 204);
 }
 
 .like{

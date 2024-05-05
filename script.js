@@ -65,3 +65,13 @@ function fecharProduto(event,tela){
       telaVenda.style.display = "block";
    }
 }
+
+function like(event,likeid){
+   const likeBtn = document.getElementById(likeid)
+
+   if(likeBtn.style.color === "rgb(255, 255, 255)"){
+      likeBtn.style.color =  "red"
+   }else{
+      likeBtn.style.color =  "#fff"
+   }
+}

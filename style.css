@@ -306,6 +306,7 @@ sup{
     background-color: #fff;
     animation: animasaoBuyContent;
     animation-duration: .1s;
+    overflow: hidden;
 }
 
 .top{
@@ -334,7 +335,7 @@ sup{
 .voltar{
     position: relative;
     width: 30px;
-    height: 30px;
+    min-height: 30px;
     border: none;
     border-radius: 5px;
     display: flex;

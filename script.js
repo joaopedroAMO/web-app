@@ -69,9 +69,9 @@ function fecharProduto(event,tela){
 function like(event,likeid){
    const likeBtn = document.getElementById(likeid)
 
-   if(likeBtn.style.color === "rgb(255, 255, 255)"){
+   if(likeBtn.style.color === "rgb(204, 204, 204)"){
       likeBtn.style.color =  "red"
    }else{
-      likeBtn.style.color =  "#fff"
+      likeBtn.style.color =  "#ccc"
    }
 }

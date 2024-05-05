@@ -65,12 +65,31 @@ sup{
     
 }
 
+/* Animação de fechamento */
+@keyframes animasaoCloseMenu {
+    from {
+        width: 300px;
+    }
+    to {
+        width: 0px;
+    }
+}
+
 @keyframes animasaoBuyContent{
     from{
         max-width: 0vw;
     }
     to{
         max-width: 100vw;
+    }
+}
+
+@keyframes animasaoCloseProduto {
+    from {
+        width: 100vw;
+    }
+    to {
+        width: 0vw;
     }
 }
 

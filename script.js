@@ -37,12 +37,16 @@ function abrirMneu(){
    }
 }
 
-function fecharMenu(){
-   if(menu.style.display = "flex"){
-      menu.style.display = "none"
-   }else{
-      menu.style.display = "flex"
-   }
+function fecharMenu() {
+   if (menu.style.display === "flex") {
+       menu.style.animation = "animasaoCloseMenu 0.2s forwards"; // Aplica a animação de fechamento
+       setTimeout(() => {
+           menu.style.display = "none"; // Altera a exibição após a animação
+           menu.style.animation = ""; // Limpa a animação após sua conclusão
+       }, 200); // Tempo de duração da animação
+} else {
+   menu.style.display = "flex";
+}
 }
 
 function abrirProduto(event,tela){
@@ -56,13 +60,16 @@ function abrirProduto(event,tela){
    }
 }
 
-function fecharProduto(event,tela){
+function fecharProduto(event, tela) {
    const telaVenda = document.getElementById(tela);
-   if(telaVenda.style.display = "block")
-   {
-      telaVenda.style.display = "none";
-   }else{
-      telaVenda.style.display = "block";
+   if (telaVenda.style.display === "block") {
+       telaVenda.style.animation = "animasaoCloseProduto 0.1s forwards";
+       setTimeout(() => {
+           telaVenda.style.display = "none";
+           telaVenda.style.animation = "";
+       }, 100);
+   } else {
+       telaVenda.style.display = "block";
    }
 }
 

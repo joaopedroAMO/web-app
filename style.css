@@ -364,6 +364,19 @@ sup{
     box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 
+.bottom > .contadorContent{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom > .contadorContent h3{
+    font-size: 24px;
+}
+
+.bottom > .contadorContent > .itemContador{
+    font-size: 20px;
+}
+
 .buy{
     border-radius: 50px;
     border: none;

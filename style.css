@@ -32,7 +32,7 @@ sup{
     right: 0;
     padding: 37px 10px;
     background-color: #ccc;
-    width: 300px;
+    width: 100%;
     height: 100%;
     z-index: 1000;
     animation-name: animasao;
@@ -47,7 +47,7 @@ sup{
     height: 40px;
     position: relative;
     top: 5px;
-    left: 220px;
+    left: 90%;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -64,7 +64,7 @@ sup{
         width: 0px;
     }
     to{
-        width: 300px;
+        width: 100%;
     }
     
 }
@@ -72,7 +72,7 @@ sup{
 /* Animação de fechamento */
 @keyframes animasaoCloseMenu {
     from {
-        width: 300px;
+        width: 100%;
     }
     to {
         width: 0px;

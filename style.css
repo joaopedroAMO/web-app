@@ -369,6 +369,33 @@ sup{
     box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 
+#feedback{
+    display: block;
+    position: fixed;
+    width: 400px;
+    text-align: center;
+    padding: 15px 0px;
+    z-index: 1001;
+    background-color: rgb(247, 84, 84);
+    color: #fff;
+    left: 50%; /* move a div para a metade da largura da janela de visualização */
+    bottom: 0px;
+    transform: translate(-50%, -50%); /* ajusta a posição para centralizar completamente */
+    animation-name: feedback;
+    animation-duration: .2s;
+    border-radius: 10px;
+}
+
+@keyframes feedback{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
 .bottom > .contadorContent{
     display: flex;
     justify-content: space-between;

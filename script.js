@@ -73,32 +73,39 @@ function fecharProduto(event, tela) {
    }
 }
 
-function like(event,likeid){
-   const likeBtn = document.getElementById(likeid)
-   const likeFeedback = document.getElementById("feedback")
+function like(event, likeid){
+   const likeBtn = document.getElementById(likeid);
+   const likeFeedback = document.getElementById("feedback");
+   
+   // Verifica se o botão foi "curtido"
+   const isLiked = (likeBtn.dataset.liked === "true");
 
-   if(likeBtn.style.color === "rgb(204, 204, 204)"){
-      likeBtn.style.color =  "red"
-
-      likeFeedback.style.display = "block"
-      likeFeedback.innerHTML = "Like adicionado!"
-      likeFeedback.style.background = "#f75454"
-
+   if(!isLiked){
+      likeBtn.dataset.liked = "true"; // Marca o botão como "curtido"
+      
+      likeBtn.style.color = "red"; // Muda a cor do botão para vermelho
+      
+      likeFeedback.innerHTML = "Like adicionado!";
+      likeFeedback.style.display = "block";
+      likeFeedback.style.background = "#f75454";
+      
       setTimeout(() => {
-         likeFeedback.style.display = "none"; // Altera a exibição após a animação
-         menu.style.animation = ""; // Limpa a animação após sua conclusão
-     }, 6000); // Tempo de duração da animação
+         likeFeedback.style.display = "none";
+     }, 6000);
    }
    else{
-      likeBtn.style.color =  "#ccc"
+      likeBtn.dataset.liked = "false"; // Marca o botão como "não curtido"
       
-      likeFeedback.innerHTML = "Que pena, você não gostou?"
-      likeFeedback.style.display = "block"
-      likeFeedback.style.background = "#a8a2a2"
+      likeBtn.style.color = "#ccc"; // Muda a cor do botão de volta para a cor padrão
+      
+      likeFeedback.innerHTML = "Que pena, você não gostou?";
+      likeFeedback.style.display = "block";
+      likeFeedback.style.background = "#a8a2a2";
+      
       setTimeout(() => {
-         likeFeedback.style.display = "none"; 
-         menu.style.animation = "";
+         likeFeedback.style.display = "none";
      }, 6000);
    }
 }
+
 

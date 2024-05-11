@@ -91,7 +91,7 @@ function like(event, likeid){
       
       setTimeout(() => {
          likeFeedback.style.display = "none";
-     }, 6000);
+     }, 3000);
    }
    else{
       likeBtn.dataset.liked = "false"; // Marca o botão como "não curtido"
@@ -104,8 +104,12 @@ function like(event, likeid){
       
       setTimeout(() => {
          likeFeedback.style.display = "none";
-     }, 6000);
+     }, 3000);
    }
 }
+
+
+// carrinho
+
 
 

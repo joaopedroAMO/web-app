@@ -370,7 +370,7 @@ sup{
 }
 
 #feedback{
-    display: block;
+    display: none;
     position: fixed;
     width: 400px;
     text-align: center;

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script src="script.js" defer></script>
+    <script src="carrinho.js" defer></script>
     <title>Juice app</title>
 </head>
 <body>
@@ -32,18 +33,40 @@
                     </button>
 
                     <!-- carrinho -->
-                    <tr class="carrinho-produto">
-                        <td class="identificasao-produto">
+                    <ul class="carrinho-produtos">
+                        <li class="identificasao-produto">
                             <img src="./img/lataDeSuco.png" alt="" class="product-img">
-                            <h1 class="product-title"></h1>
-                        </td>
-                        <td class="identificasao-produto">
-                            <span class="product-price"></span>
-                        </td>
-                        <td class="identificasao-produto">
+                            <h1 class="product-title">suco de manga</h1>
+                        </li>
+                        <li class="identificasao-produto">
+                            <span class="product-price">R$10,00</span>
+                        </li>
+                        <li class="identificasao-produto">
+                            <button class="remove-product">remover</button>
+                        </li>
+                    </ul>
 
-                        </td>
-                    </tr>
+                    <ul class="carrinho-produtos">
+                        <li class="identificasao-produto">
+                            <img src="./img/lataDeSuco.png" alt="" class="product-img">
+                            <h1 class="product-title">suco de uva</h1>
+                        </li>
+                        <li class="identificasao-produto">
+                            <span class="product-price">R$20,00</span>
+                        </li>
+                        <li class="identificasao-produto">
+                            <button class="remove-product">remover</button>
+                        </li>
+                    </ul>
+
+                    <div class="tfooter">
+                        <div class="tbody-oraganizador">
+                            <div class="total-carrinho">
+                                <strong>total</strong>
+                                <span>R$30,00</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="juicesContent">
@@ -189,13 +212,18 @@
                         favorite
                     </span>
                 </button>
-                <img src="./img/lataDeSuco.png" alt="">
+
+                <button class="adicionar-carrinho">
+                    add carrinho
+                </button>
+
+                <img src="./img/lataDeSuco.png" alt="" class="img-produto">
             </div>
             <div class="bottom">
-                <h2>Suco De Abacate</h2>
+                <h2 class="product-name">Suco De Abacate</h2>
                 <p>description</p>
                 <div class="contadorContent">
-                    <h3 class="" id="preco6"><sup>$</sup>10,00</h3>
+                    <h3 class="preco" class="" id="preco6"><sup>$</sup>10,00</h3>
                     <div class="itemContador tres">
                         <button id="btnMais" onclick="adicionar(event,'display6','preco6')">+</button>
                         <span class="display" id="display6">1</span>
@@ -221,13 +249,18 @@
                         favorite
                     </span>
                 </button>
-                <img src="./img/lataDeSuco.png" alt="">
+
+                <button class="adicionar-carrinho">
+                    add carrinho
+                </button>
+
+                <img src="./img/lataDeSuco.png" alt="" class="img-produto">
             </div>
             <div class="bottom">
-                <h2>Suco De Maçã</h2>
+                <h2 class="product-name">Suco De Maçã</h2>
                 <p>description</p>
                 <div class="contadorContent">
-                    <h3 id="preco7"><sup>$</sup>10,00</h3>
+                    <h3 class="preco" id="preco7"><sup>$</sup>10,00</h3>
                     <div class="itemContador tres">
                         <button id="btnMais" onclick="adicionar(event,'display7','preco7')">+</button>
                         <span class="display" id="display7">1</span>
@@ -253,13 +286,18 @@
                         favorite
                     </span>
                 </button>
-                <img src="./img/lataDeSuco.png" alt="">
+
+                <button class="adicionar-carrinho">
+                    add carrinho
+                </button>
+                
+                <img src="./img/lataDeSuco.png" alt="" class="img-produto">
             </div>
             <div class="bottom">
-                <h2>Suco De Uva</h2>
+                <h2 class="product-name">Suco De Uva</h2>
                 <p>description</p>
                 <div class="contadorContent">
-                    <h3 id="preco8"><sup>$</sup>10,00</h3>
+                    <h3 class="preco" id="preco8"><sup>$</sup>10,00</h3>
                     <div class="itemContador tres">
                         <button id="btnMais" onclick="adicionar(event,'display8','preco8')">+</button>
                         <span class="display" id="display8">1</span>
@@ -285,13 +323,18 @@
                         favorite
                     </span>
                 </button>
-                <img src="./img/lataDeSuco.png" alt="">
+                
+                <button class="adicionar-carrinho">
+                    add carrinho
+                </button>
+
+                <img src="./img/lataDeSuco.png" alt="" class="img-produto">
             </div>
             <div class="bottom">
-                <h2>Suco De Manga</h2>
+                <h2 class="product-name">Suco De Manga</h2>
                 <p>description</p>
                 <div class="contadorContent">
-                    <h3 id="preco9"><sup>$</sup>10,00</h3>
+                    <h3 class="preco" id="preco9"><sup>$</sup>10,00</h3>
                     <div class="itemContador tres">
                         <button id="btnMais" onclick="adicionar(event,'display9','preco9')">+</button>
                         <span class="display" id="display9">1</span>
@@ -317,13 +360,18 @@
                         favorite
                     </span>
                 </button>
-                <img src="./img/lataDeSuco.png" alt="">
+
+                <button class="adicionar-carrinho">
+                    add carrinho
+                </button>
+
+                <img src="./img/lataDeSuco.png" alt="" class="img-produto">
             </div>
             <div class="bottom">
-                <h2>Suco De Banana</h2>
+                <h2 class="product-name">Suco De Banana</h2>
                 <p>description</p>
                 <div class="contadorContent">
-                    <h3 id="preco10"><sup>$</sup>10,00</h3>
+                    <h3 class="preco" id="preco10"><sup>$</sup>10,00</h3>
                     <div class="itemContador tres">
                         <button id="btnMais" onclick="adicionar(event,'display10','preco10')">+</button>
                         <span class="display" id="display10">1</span>

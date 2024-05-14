@@ -423,3 +423,18 @@ sup{
 .buy:hover{
     background-color: #fdd4d8;
 }
+
+/* carrinho */
+.carrinho-produtos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.identificasao-produto{
+    display: flex;
+}
+
+.product-img{
+    width: 50px;
+}

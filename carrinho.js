@@ -1,35 +1,31 @@
-//botão de remcover produtos
-const removeBtn = document.getElementsByClassName("remove-product");
-for(var i = 0; i<removeBtn.length; i++){
-    removeBtn[i].addEventListener("click", function(event){
-        event.target.parentElement.parentElement.remove();
-        updateTotal();
-    });
+if (document.readyState == "loading"){
+    document.addEventListener("DOMContentLoaded", ready);
+}else{
+    ready()
 }
+
+function ready(){
+    const removeBtn = document.getElementsByClassName("remove-product");
+    for(var i = 0; i<removeBtn.length; i++){
+    removeBtn[i].addEventListener("click", removeProduct);
+    }
+
+    const buttonAddCart = document.getElementsByClassName("adicionar-carrinho");
+    for(var i = 0; i < buttonAddCart.length; i++){
+    buttonAddCart[i].addEventListener("click", addProductToCart)
+    }
+}
+
+//botão de remcover produtos
 //fim botão para remover produtos
 
 //atualizar o total do carrinho
-function updateTotal(){
-    let totalValorCarrinho = 0;
-    const totalCart = document.getElementsByClassName("carrinho-produtos");
-    for(var i = 0; i<totalCart.length; i++){
-        const productPrice = totalCart[i].getElementsByClassName("product-price")[0].innerHTML.replace("R$", "").replace(",", ".");
-        
-        totalValorCarrinho += productPrice *1;
-    }
-    totalValorCarrinho = totalValorCarrinho.toFixed(2);
-    totalValorCarrinho = totalValorCarrinho.replace(".", ",");
-    const totalPrice = document.querySelector(".total-carrinho span").innerHTML = "R$" + totalValorCarrinho
-}
+
 // console.log(totalValorCarrinho)
 
 //fim atualizar o total do carrinho
 
 //adicionar produto ao carrinho
-const buttonAddCart = document.getElementsByClassName("adicionar-carrinho");
-for(var i = 0; i < buttonAddCart.length; i++){
-    buttonAddCart[i].addEventListener("click", addProductToCart)
-}
 
 function addProductToCart(event){
     const button = event.target
@@ -37,6 +33,14 @@ function addProductToCart(event){
     const productImg = productInfos.getElementsByClassName("img-produto")[0].src
     const productTitle = productInfos.getElementsByClassName("product-name")[0].innerHTML
     const productPriceSpan = productInfos.getElementsByClassName("preco")[0].innerHTML
+
+    const productCartNmae = document.getElementsByClassName("product-title")
+    for(var i = 0; i < productCartNmae.length; i++){
+        if(productCartNmae[i].innerHTML === productTitle){
+            window.alert("Já esta no carrinho");
+            return
+        }
+    }
 
     let newProductCart = document.createElement("ul")
     newProductCart.classList.add("carrinho-produtos")
@@ -58,5 +62,28 @@ function addProductToCart(event){
     const tableCart = document.getElementById("menuDrop");
     tableCart.append(newProductCart)
 
+    updateTotal()
+
+    newProductCart = document.getElementsByClassName("remove-product")[0].addEventListener("click", removeProduct)
+
+   
+}
+
+function removeProduct(event){
+    event.target.parentElement.parentElement.remove()
+    updateTotal()
 }
 //fim adicionar produto ao carrinho
+
+function updateTotal(){
+    let totalValorCarrinho = 0;
+    const totalCart = document.getElementsByClassName("carrinho-produtos");
+    for(var i = 0; i<totalCart.length; i++){
+        const productPrice = totalCart[i].getElementsByClassName("product-price")[0].innerHTML.replace("R$", "").replace(",", ".");
+        
+        totalValorCarrinho += productPrice;
+    }
+    totalValorCarrinho = totalValorCarrinho.toFixed(2);
+    totalValorCarrinho = totalValorCarrinho.replace(".", ",");
+    const totalPrice = document.querySelector(".total-carrinho span").innerHTML = "R$" + totalValorCarrinho
+}

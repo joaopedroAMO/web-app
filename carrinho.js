@@ -5,14 +5,14 @@ if (document.readyState == "loading"){
 }
 
 function ready(){
-    const removeBtn = document.getElementsByClassName("remove-product");
+    const removeBtn = document.getElementsByClassName("remove-product")
     for(var i = 0; i<removeBtn.length; i++){
-    removeBtn[i].addEventListener("click", removeProduct);
+        removeBtn[i].addEventListener("click", remuveProduct);
     }
 
     const buttonAddCart = document.getElementsByClassName("adicionar-carrinho");
     for(var i = 0; i < buttonAddCart.length; i++){
-    buttonAddCart[i].addEventListener("click", addProductToCart)
+        buttonAddCart[i].addEventListener("click", addProductToCart)
     }
 }
 
@@ -37,7 +37,7 @@ function addProductToCart(event){
     const productCartNmae = document.getElementsByClassName("product-title")
     for(var i = 0; i < productCartNmae.length; i++){
         if(productCartNmae[i].innerHTML === productTitle){
-            window.alert("Já esta no carrinho");
+            window.alert("Já está no carrinho");
             return
         }
     }
@@ -47,29 +47,25 @@ function addProductToCart(event){
 
     newProductCart.innerHTML = 
     `
-    <li class="identificasao-produto">
-        <img src="${productImg}" alt="${productTitle}" class="product-img">
-        <h1 class="product-title">${productTitle}</h1>
-    </li>
-    <li class="identificasao-produto">
-        <span class="product-price">${productPriceSpan}</span>
-    </li>
-    <li class="identificasao-produto">
-        <button class="remove-product">remover</button>
-    </li>
+        <li class="identificasao-produto">
+            <img src="${productImg}" alt="${productTitle}" class="product-img">
+            <h1 class="product-title">${productTitle}</h1>
+        </li>
+        <li class="identificasao-produto">
+            <span class="product-price">${productPriceSpan}</span>
+        </li>
+        <li class="identificasao-produto">
+            <button class="remove-product" onclick="remuveProduct(event)">remover</button>
+        </li>
     `
 
     const tableCart = document.getElementById("menuDrop");
     tableCart.append(newProductCart)
-
     updateTotal()
-
-    newProductCart = document.getElementsByClassName("remove-product")[0].addEventListener("click", removeProduct)
-
-   
 }
 
-function removeProduct(event){
+
+function remuveProduct(event){
     event.target.parentElement.parentElement.remove()
     updateTotal()
 }

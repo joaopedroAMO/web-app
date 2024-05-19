@@ -37,10 +37,24 @@ function addProductToCart(event){
     const productCartNmae = document.getElementsByClassName("product-title")
     for(var i = 0; i < productCartNmae.length; i++){
         if(productCartNmae[i].innerHTML === productTitle){
-            window.alert("Já está no carrinho");
+            const avisoCarrinho = document.getElementById("checagem-carrinho")
+            avisoCarrinho.style.display = "block"
+            avisoCarrinho.innerHTML = "Este produto já esta no carrinho"
+            setTimeout(() => {
+                avisoCarrinho.style.display = "none";
+                avisoCarrinho.style.animation = "";
+            }, 3000);
             return
         }
     }
+
+    const addCarrinho = document.getElementById("add-carrinho")
+    addCarrinho.style.display = "block"
+    addCarrinho.innerHTML = "Produto adicionado ao carrinho"
+    setTimeout(() => {
+        addCarrinho.style.display = "none";
+        addCarrinho.style.animation = "";
+    }, 3000);
 
     let newProductCart = document.createElement("ul")
     newProductCart.classList.add("carrinho-produtos")
@@ -58,9 +72,10 @@ function addProductToCart(event){
             <button class="remove-product" onclick="remuveProduct(event)">remover</button>
         </li>
     `
-
+    
     const tableCart = document.getElementById("menuDrop");
     tableCart.append(newProductCart)
+
     updateTotal()
 }
 

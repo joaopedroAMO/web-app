@@ -426,6 +426,7 @@ sup{
 
 /* carrinho */
 .carrinho-produtos{
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -438,3 +439,62 @@ sup{
 .product-img{
     width: 50px;
 }
+
+/* produtos do carrinho */
+.adicionar-carrinho{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 7px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdd4d8;
+    border-radius: 5px;
+}
+
+.adicionar-carrinho > span{
+    color: #fff;
+    font-size: large;
+}
+
+#checagem-carrinho{
+    display: none;
+    position: fixed;
+    width: 90%;
+    text-align: center;
+    padding: 15px 0px;
+    z-index: 1002;
+    background-color: #a8a2a2;
+    color: #fff;
+    left: 50%; /* move a div para a metade da largura da janela de visualização */
+    bottom: 0%;
+    transform: translate(-50%, -50%); /* ajusta a posição para centralizar completamente */
+    animation-name: feedback;
+    animation-duration: .2s;
+    border-radius: 10px;
+}
+
+#add-carrinho{
+    display: none;
+    position: fixed;
+    width: 90%;
+    text-align: center;
+    padding: 15px 0px;
+    z-index: 1001;
+    background-color: rgb(247, 84, 84);
+    color: #fff;
+    left: 50%; /* move a div para a metade da largura da janela de visualização */
+    bottom: 0%;
+    transform: translate(-50%, -50%); /* ajusta a posição para centralizar completamente */
+    animation-name: feedback;
+    animation-duration: .2s;
+    border-radius: 10px;
+}
+
+.tfooter{
+    position: absolute;
+    bottom: 10px;
+}
+/*fim produtos do carrinho */

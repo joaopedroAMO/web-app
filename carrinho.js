@@ -80,7 +80,7 @@ function addProductToCart(event){
 
 
 function remuveProduct(event){
-    event.target.parentElement.parentElement.remove()
+    event.target.parentElement.parentElement.parentElement.remove()
     updateTotal()
 }
 //fim adicionar produto ao carrinho

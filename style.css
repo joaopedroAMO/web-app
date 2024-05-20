@@ -33,7 +33,7 @@ sup{
     padding: 37px 10px;
     background-color: #ccc;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     z-index: 1000;
     animation-name: animasao;
     animation-duration: .2s;
@@ -439,7 +439,7 @@ sup{
 .infos-produto{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
     color: #fff;
     height: 100%;
 }
@@ -456,8 +456,8 @@ sup{
 .identificasao-produto{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 35px;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .product-img{
@@ -496,7 +496,6 @@ sup{
     border-radius: 7px;
     background-color: #fdd4d8;
     border: none;
-    box-shadow:  0px 5px 10px rgba(0,0,0,0.1);
     transition: .2s;
 }
 

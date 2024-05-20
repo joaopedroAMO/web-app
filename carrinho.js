@@ -66,10 +66,9 @@ function addProductToCart(event){
             <div class="infos-produto">
                 <h2 class="product-title">${productTitle}</h2>
                 <span class="product-price">${productPriceSpan}</span>
+                <button class="remove-product" onclick="remuveProduct(event)">remover</button>
+
             <div>
-        </li>
-        <li class="identificasao-produto">
-            <button class="remove-product" onclick="remuveProduct(event)">remover</button>
         </li>
     `
     

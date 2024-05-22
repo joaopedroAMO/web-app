@@ -108,6 +108,31 @@ function like(event, likeid){
    }
 }
 
+document.getElementById("searchInput").addEventListener("input", function () {
+   const searchValue = this.value.toLowerCase().trim();
+   const searchKeywords = searchValue.split(/\s+/).map(keyword => normalizeString(keyword));
+   const productItems = document.querySelectorAll(".produtosDescrisao ul li");
+
+   productItems.forEach(item => {
+       const productName = normalizeString(item.querySelector("h3").textContent.toLowerCase());
+       const matches = searchKeywords.every(keyword => productName.includes(keyword));
+
+       if (matches) {
+           item.style.display = "flex";
+       }else {
+           item.style.display = "none";
+       }
+   });
+});
+
+function normalizeString(str) {
+   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+
+
+
+
 
 // carrinho
 
